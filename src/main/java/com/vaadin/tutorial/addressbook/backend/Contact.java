@@ -19,9 +19,11 @@ public class Contact implements Serializable, Cloneable {
 
     private String firstName = "";
     private String lastName = "";
-    private String phone = "";
-    private String email = "";
-    private Date birthDate;
+    //private String phone = "";
+    //private String email = "";
+    private Date startDate;
+    private Date endDate;
+    //private Date birthDate;
 
     public Long getId() {
         return id;
@@ -46,7 +48,7 @@ public class Contact implements Serializable, Cloneable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
+    /*
     public String getPhone() {
         return phone;
     }
@@ -54,7 +56,7 @@ public class Contact implements Serializable, Cloneable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
+    /*
     public String getEmail() {
         return email;
     }
@@ -62,13 +64,28 @@ public class Contact implements Serializable, Cloneable {
     public void setEmail(String email) {
         this.email = email;
     }
-
+	
     public Date getBirthDate() {
         return birthDate;
     }
-
+    */
+    //Added get and set for Start and End dates
+    public Date getStartDate(){
+    	return startDate;
+    }
+    public Date getEndDate(){
+    	return endDate;
+    }
+    /*
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+    */
+    public void setStartDate(Date startDate){
+    	this.startDate = startDate;
+    }
+    public void setEndDate(Date endDate){
+    	this.endDate = endDate;
     }
 
     @Override
@@ -83,8 +100,8 @@ public class Contact implements Serializable, Cloneable {
     @Override
     public String toString() {
         return "Contact{" + "id=" + id + ", firstName=" + firstName
-                + ", lastName=" + lastName + ", phone=" + phone + ", email="
-                + email + ", birthDate=" + birthDate + '}';
+                + ", lastName=" + lastName + '}';//", phone=" + phone + '}';//", email="
+              //  + email + '}';//", birthDate=" + birthDate + '}';
     }
 
 }

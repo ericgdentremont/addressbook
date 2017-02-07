@@ -25,11 +25,11 @@ public class ContactForm extends FormLayout {
 
     Button save = new Button("Save", this::save);
     Button cancel = new Button("Cancel", this::cancel);
-    TextField firstName = new TextField("First name");
+    TextField firstName = new TextField("First name"); 
     TextField lastName = new TextField("Last name");
-    TextField phone = new TextField("Phone");
-    TextField email = new TextField("Email");
-    DateField birthDate = new DateField("Birth date");
+    DateField startDate = new DateField("Start Date");//changed from Phone
+    DateField endDate = new DateField("End Date");//changed from Email
+    //DateField birthDate = new DateField("Birth date");
 
     Contact contact;
 
@@ -60,7 +60,7 @@ public class ContactForm extends FormLayout {
         HorizontalLayout actions = new HorizontalLayout(save, cancel);
         actions.setSpacing(true);
 
-        addComponents(actions, firstName, lastName, phone, email, birthDate);
+        addComponents(actions, firstName, lastName, startDate, endDate);
     }
 
     /*

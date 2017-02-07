@@ -38,12 +38,16 @@ public class ContactService {
                 Contact contact = new Contact();
                 contact.setFirstName(fnames[r.nextInt(fnames.length)]);
                 contact.setLastName(lnames[r.nextInt(fnames.length)]);
-                contact.setEmail(contact.getFirstName().toLowerCase() + "@"
-                        + contact.getLastName().toLowerCase() + ".com");
-                contact.setPhone("+ 358 555 " + (100 + r.nextInt(900)));
-                cal.set(1930 + r.nextInt(70),
+                //contact.setEmail(contact.getFirstName().toLowerCase() + "@"
+                //        + contact.getLastName().toLowerCase() + ".com");
+                //contact.setPhone("+ 358 555 " + (100 + r.nextInt(900)));
+                cal.set(2015 + r.nextInt(2),
                         r.nextInt(11), r.nextInt(28));
-                contact.setBirthDate(cal.getTime());
+                contact.setStartDate(cal.getTime());
+                cal.set(2017 + r.nextInt(1),
+                        r.nextInt(11), r.nextInt(28));
+                contact.setEndDate(cal.getTime());
+                //contact.setBirthDate(cal.getTime());
                 contactService.save(contact);
             }
             instance = contactService;
